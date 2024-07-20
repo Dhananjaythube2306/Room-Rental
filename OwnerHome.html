@@ -30,12 +30,7 @@
                   <li class="nav-item">
                     <a class="nav-link active" aria-current="page" href="./index.html">Home</a>
                   </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#">Login</a>
-                </li>
-                <li class="nav-item">
-                      <a class="nav-link" href="#">Link</a>                   
-                  </li>
+                  
                 </ul>
                 <div class="Navbutton">
                   <li class="nav-item dropdown">
@@ -46,7 +41,7 @@
                       <a class="dropdown-item" id="popupBtn" href="#">Information</a>
                       <a class="dropdown-item" href="#">Another action</a>
                       <div class="dropdown-divider"></div>
-                      <a class="dropdown-item" href="./FinderSignup.html">Logout</a>
+                      <a class="dropdown-item" href="./OwnerSignin.html">Logout</a>
                     </div>
                   </li>
                 </div>
@@ -120,6 +115,27 @@
         </div> 
             </div>
      <!-- End Home Section -->
+     <script>
+      document.addEventListener('DOMContentLoaded', function () {
+          var popupBtn = document.getElementById('popupBtn');
+          var popup = document.getElementById('popup');
+          var closeBtn = document.getElementsByClassName('close')[0];
+      
+          popupBtn.onclick = function() {
+              popup.style.display = 'flex';
+          }
+      
+          closeBtn.onclick = function() {
+              popup.style.display = 'none';
+          }
+      
+          window.onclick = function(event) {
+              if (event.target == popup) {
+                  popup.style.display = 'none';
+              }
+          }
+      });
+  </script>
      <script src="./js/Script.js"></script>
      <script>
      
